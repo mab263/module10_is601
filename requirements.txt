@@ -38,3 +38,7 @@ typing_extensions==4.16.0
 urllib3==2.8.0
 uvicorn==0.32.0
 setuptools==84.1.0
+sqlalchemy==VERSION
+psycopg2-binary==VERSION
+bcrypt==VERSION
+email-validator==VERSION
