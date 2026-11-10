@@ -9,7 +9,7 @@ on:
     branches: [main]
 
 env:
-  IMAGE_NAME: fastapi-calculator
+  IMAGE_NAME: module10_is601
   TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/fastapi_test
   DATABASE_URL: postgresql://postgres:postgres@localhost:5432/fastapi_test
 
@@ -72,7 +72,7 @@ jobs:
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@0.35.0
         with:
-          image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/fastapi-calculator:latest
+          image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
           format: table
           exit-code: '1'
           ignore-unfixed: true
